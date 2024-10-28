@@ -1,10 +1,14 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
+import { validateColors } from './validate-colors.js';
 
 // Register Tokens Studio transforms
 register(StyleDictionary);
 
-// Initialize Style Dictionary with configuration using 'new'
+// Validate colors before building
+await validateColors();
+
+// Initialize Style Dictionary with configuration
 const styleDictionary = new StyleDictionary({
     source: ['tokens/*.json'],
     preprocessors: ['tokens-studio'],
