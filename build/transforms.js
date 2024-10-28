@@ -1,32 +1,24 @@
 import StyleDictionary from 'style-dictionary';
 
-// Transform for font sizes, logging output to validate each token processed
+// Register custom transforms and transform groups
+
+// Transform for fontSize
 StyleDictionary.registerTransform({
     name: 'size/px',
     type: 'value',
-    matcher: function (token) {
-        console.log('Processing fontSize token:', token);
-        return token.attributes && token.attributes.category === 'fontSize';
-    },
-    transformer: function (token) {
-        return `${token.value}px`;
-    }
+    matcher: (token) => token.attributes && token.attributes.category === 'fontSize',
+    transformer: (token) => `${token.value}px`
 });
 
-// Transform for spacing, with added logging
+// Transform for spacing
 StyleDictionary.registerTransform({
     name: 'size/rem',
     type: 'value',
-    matcher: function (token) {
-        console.log('Processing spacing token:', token);
-        return token.attributes && token.attributes.category === 'spacing';
-    },
-    transformer: function (token) {
-        return `${token.value}rem`;
-    }
+    matcher: (token) => token.attributes && token.attributes.category === 'spacing',
+    transformer: (token) => `${token.value}rem`
 });
 
-// Register custom transform group
+// Registering custom transform group
 StyleDictionary.registerTransformGroup({
     name: 'custom/css',
     transforms: ['attribute/cti', 'name/cti/kebab', 'size/px', 'size/rem']

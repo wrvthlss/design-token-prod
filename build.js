@@ -1,29 +1,36 @@
 import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
 
-// Register custom transforms directly within build.js
+// Register Tokens Studio transforms
+register(StyleDictionary);
 
-// Transform for fontSize
-StyleDictionary.registerTransform({
-    name: 'size/px',
-    type: 'value',
-    matcher: (token) => token.attributes?.category === 'fontSize',
-    transformer: (token) => `${token.value}px`
+// Initialize Style Dictionary with configuration using 'new'
+const styleDictionary = new StyleDictionary({
+    source: ['tokens/*.json'],
+    preprocessors: ['tokens-studio'],
+    platforms: {
+        css: {
+            transformGroup: 'tokens-studio',
+            buildPath: 'build/css/',
+            files: [
+                {
+                    destination: 'variables.css',
+                    format: 'css/variables',
+                },
+            ],
+        },
+        json: {
+            transformGroup: 'tokens-studio',
+            buildPath: 'build/json/',
+            files: [
+                {
+                    destination: 'variables.json',
+                    format: 'json/flat',
+                },
+            ],
+        },
+    },
 });
 
-// Transform for spacing
-StyleDictionary.registerTransform({
-    name: 'size/rem',
-    type: 'value',
-    matcher: (token) => token.attributes?.category === 'spacing',
-    transformer: (token) => `${token.value}rem`
-});
-
-// Register custom transform group
-StyleDictionary.registerTransformGroup({
-    name: 'custom/css',
-    transforms: ['attribute/cti', 'name/cti/kebab', 'size/px', 'size/rem']
-});
-
-// Extend the configuration and build
-const styleDictionaryInstance = StyleDictionary.extend('./config.json');
-await styleDictionaryInstance.buildAllPlatforms();
+// Build platforms
+await styleDictionary.buildAllPlatforms();

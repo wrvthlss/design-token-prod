@@ -1,0 +1,257 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --fontSizeXs: 12px;
+  --fontSizeSm: 14px;
+  --fontSizeMd: 16px;
+  --fontSizeLg: 18px;
+  --fontSizeXl: 22px;
+  --fontSize2xl: 26px;
+  --fontSize3xl: 32px;
+  --borderRadiusNone: 0;
+  --borderRadiusRoundedSm: 2px;
+  --borderRadiusRoundedMd: 5px;
+  --borderRadiusRoundedLg: 10px;
+  --borderRadiusRoundedXl: 15px;
+  --borderRadiusRounded2xl: 20px;
+  --borderRadiusRounded3xl: 25px;
+  --borderRadiusRoundedFull: 9999px;
+  --shadowsShadow1: 0 8px 10px 0 #0000001a; /* Shadow 1 */
+  --shadowsShadow2: 0 4px 14px 0 #00000040; /* Shadow 2 */
+  --shadowsShadow3: 0 5px 30px 0 #09051f99; /* Shadow 3 */
+  --shadowsShadow4: 0 5px 20px 0 #0000001a; /* Shadow 4 */
+  --shadowsShadow5: 0 5px 25px 0 #09051f26; /* Shadow 5 */
+  --shadowsShadow6: 0 5px 25px 0 rgba(9,5,31,0.62); /* Shadow 5 */
+  --fontFamilySfPro: 'SF Pro';
+  --fontWeightSfPro0: 400;
+  --fontWeightSfPro1: 600;
+  --fontWeightSfPro2: 700;
+  --lineHeight0: 34;
+  --lineHeight1: 30;
+  --lineHeight2: 26;
+  --lineHeight3: 22;
+  --lineHeight4: 20;
+  --lineHeight5: 16;
+  --lineHeight6: 38;
+  --lineHeight7: 32;
+  --lineHeight8: 28;
+  --lineHeight9: 24;
+  --letterSpacing0: 0em;
+  --letterSpacing1: 0.10400000000000001em;
+  --letterSpacing2: 0;
+  /**
+   * #3A3A5E
+   * Primary color
+   */
+  --colorsPrimary100: #3a3a5e;
+  /**
+   * #020205
+   * Overlay
+   */
+  --colorsOverlay100: rgba(2, 2, 5, 0.6);
+  /**
+   * #FFFFFF
+   * Secondary 5 color
+   */
+  --colorsSecondary100Dark: #ffffff;
+  /**
+   * #F4F7FA
+   * Light background secondary 2 color
+   */
+  --colorsSecondary100Light: #f4f7fa;
+  /**
+   * #E4EBF4
+   * Secondary 4 color
+   */
+  --colorsSecondary200Dark: #e4ebf4;
+  /**
+   * #252941
+   * Light background secondary 1 color
+   */
+  --colorsSecondary200Light: #252941;
+  /**
+   * #38619D
+   * Secondary 2 color
+   */
+  --colorsSecondary300Dark: #38619d;
+  /**
+   * #435A7F
+   * Secondary 3 color
+   */
+  --colorsSecondary400Dark: #435a7f;
+  /**
+   * #252941
+   * Secondary 1 color
+   */
+  --colorsSecondary500Dark: #252941;
+  /**
+   * #3A3A5E, #282844, #0E152D
+   * Primary gradient for screen background
+   */
+  --colorsGradient100: linear-gradient(180deg, #3a3a5e 0%, #282844 50%, #0e152d 100%);
+  /**
+   * #435A7F (75%), #242941
+   * Gradient 1 color used for results background
+   */
+  --colorsGradient200: linear-gradient(180deg, #435a7fbf 0%, #252941 100%);
+  --colorsGradient300: linear-gradient(180deg, #050a254d 0%, #050a2500 100%); /* #050A25 (30%), #050A25 (0%) */
+  --colorsGradient400: linear-gradient(180deg, #050a251a 0%, #050a2500 100%); /* #050A25 (10%), #050A25 (0%) */
+  /**
+   * #C78FFF, #38D7FF
+   * Border color for cards
+   */
+  --colorsGradient500: linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
+  /**
+   * #C78FFF, #FF84DD
+   * Background color for icons used in card results
+   */
+  --colorsGradient600: linear-gradient(143deg, #c78fff 0%, #ff84dd 100%);
+  /**
+   * #AAE1D4
+   * Success color
+   */
+  --colorsAlertSuccessDark: #aae1d4;
+  /**
+   * #09955B
+   * Success color
+   */
+  --colorsAlertSuccessLight: #09955b;
+  /**
+   * #38D7FF
+   * Info color & links color on dark background
+   */
+  --colorsAlertInfoDark: #38d7ff;
+  /**
+   * #1D62D7
+   * Info color & body links on light background
+   */
+  --colorsAlertInfoLight: #1d62d7;
+  /**
+   * #F8D28F
+   * Pending color also used for warnings
+   */
+  --colorsAlertPendingDark: #f8d28f;
+  /**
+   * #A86500
+   * Pending color
+   */
+  --colorsAlertPendingLight: #a86500;
+  /**
+   * #F08B8A
+   * Error color & alert color
+   */
+  --colorsAlertErrorDark: #f08b8a;
+  /**
+   * #CF413E
+   * Error color & alert color
+   */
+  --colorsAlertErrorLight: #cf413e;
+  /**
+   * #A4A8B6
+   * Accent 3 color
+   */
+  --colorsAccents100Dark: #a4a8b6;
+  /**
+   * #6D7588
+   * Accent 3 color
+   */
+  --colorsAccents100Light: #6d7588;
+  /**
+   * #FF84DD
+   * Accent 2 color
+   */
+  --colorsAccents200Dark: #ff84dd;
+  /**
+   * #9E00FF
+   * Accent 1 color
+   */
+  --colorsAccents200Light: #9e00ff;
+  /**
+   * #C78FFF
+   * Accent 1 color
+   */
+  --colorsAccents300Dark: #c78fff;
+  /**
+   * #C20098
+   * Accent 2 color
+   */
+  --colorsAccents300Light: #c20098;
+  --spacing0: 0;
+  --spacing100: 8px;
+  --spacing125: 10px;
+  --spacing150: 12px;
+  --spacing200: 16px;
+  --spacing250: 20px;
+  --spacing300: 24px;
+  --spacing400: 32px;
+  --spacing500: 40px;
+  --spacing600: 48px;
+  --spacing700: 56px;
+  --spacing800: 64px;
+  --spacing1000: 80px;
+  --spacing1600: 128px;
+  --spacing025: 2px;
+  --spacing050: 4px;
+  --backgroundBlur: 40px; /* Blur for Overlay component */
+  --inputBorderDefault: 1px solid linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
+  --inputBorderResting: 1px solid #a4a8b6;
+  --inputIconFillDefault: #38d7ff;
+  --inputIconFillResting: #e4ebf4;
+  --inputBackgroundDefault: #3a3a5e;
+  --inputCursorFillDefault: #38d7ff;
+  --inputTextFontWeight: 400;
+  --inputTextFontSize: 14px;
+  --inputTextLineHeight: 20;
+  --inputBorderRadius: 5px;
+  --checkboxBorderDeselected: 1px solid #a4a8b6;
+  --checkboxBorderSelected: 1px solid #c78fff;
+  --checkboxLabelFill: #ffffff;
+  --checkboxFillSelcted: #c78fff;
+  --checkboxTextFontWeight: 400;
+  --checkboxTextFontSize: 16px;
+  --checkboxTextLineHeight: 22;
+  --checkboxBorderRadius: 5px;
+  --radioBorderDeselected: 1px solid #a4a8b6;
+  --radioFillSelcted: #c78fff;
+  --radioTextFontWeight: 400;
+  --radioTextFontSize: 16px;
+  --radioTextLineHeight: 22;
+  --radioBorderRadius: 9999px;
+  --textareaBorderDefault: 1px solid linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
+  --textareaIconFillDefault: #38d7ff;
+  --textareaTextFontWeight: 400;
+  --textareaTextFontSize: 14px;
+  --textareaTextLineHeight: 20;
+  --textareaBorderRadius: 5px;
+  --cardBorderLargeOutline: 1px solid linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
+  --cardBackgroundDefault: #435a7f;
+  --cardFillLargeOutline: #252941;
+  --cardBorderRadius: 10px;
+  --buttonBorderDefault: 1px solid #ffffff;
+  --buttonTextFillDefault: #ffffff;
+  --buttonTextFontWeightSmall: 600;
+  --buttonTextFontWeightLarge: 600;
+  --buttonTextFontSizeSmall: 14px;
+  --buttonTextFontSizeLarge: 16px;
+  --buttonTextLineHeightSmall: 22;
+  --buttonTextLineHeightLarge: 20;
+  --buttonIconFillDefault: #38d7ff;
+  --buttonBorderRadiusSmall: 10px;
+  --buttonBorderRadiusLarge: 20px;
+  --dividerFillDefault: #a4a8b6;
+  --dividerWidthDefault: 1px;
+  --ctaIconFillAlt: #ffffff;
+  --ctaIconFillDefault: #38d7ff;
+  --ctaLabelFill: #ffffff;
+  --ctaTextFontWeight: 600;
+  --ctaTextFontSize: 16px;
+  --modalIconFill: #ffffff;
+  --modalBackgroundDefault: #3a3a5e;
+  --modalDropshadowDefault: 0 5px 25px 0 rgba(9,5,31,0.62);
+  --modalBorderRadiusTopLeft: 20px;
+  --modalBorderRadiusBottomRight: 0;
+  --modalBorderRadiusBottomLeft: 0;
+  --modalBorderRadiusTopRight: 20px;
+}

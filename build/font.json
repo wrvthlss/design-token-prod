@@ -1,0 +1,11 @@
+{
+  "fontSize": {
+    "small": {
+      "value": "12",
+      "type": "fontSizes",
+      "attributes": {
+        "category": "fontSize"
+      }
+    }
+  }
+}
