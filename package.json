@@ -1,16 +1,23 @@
 {
   "name": "design-token-prod",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "style-dictionary build"
+    "build": "style-dictionary build",
+    "validate": "ajv validate -s schemas/token-schema.json -d 'tokens/*.json'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^1.2.6",
     "style-dictionary": "^4.1.4"
   }
 }
