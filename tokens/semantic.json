@@ -125,7 +125,7 @@
       }
     },
     "fill": {
-      "selcted": {
+      "selected": {
         "value": "{colors.accents.300.dark}",
         "type": "color"
       }
