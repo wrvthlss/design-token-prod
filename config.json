@@ -3,7 +3,7 @@
   "preprocessors": ["tokens-studio"],
   "platforms": {
     "web": {
-      "transformGroup": "tokens-studio",
+      "transformGroup": "css",
       "buildPath": "build/web/",
       "files": [
         {
@@ -16,7 +16,7 @@
       ]
     },
     "json": {
-      "transformGroup": "tokens-studio",
+      "transformGroup": "css",
       "buildPath": "build/json/",
       "files": [
         {

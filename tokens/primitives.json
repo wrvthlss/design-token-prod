@@ -1,4 +1,5 @@
 {
+  "global": {
   "fontSize": {
     "xs": {
       "value": "12",
@@ -68,62 +69,52 @@
       "1": {
         "value": {
           "color": "#0000001a",
-          "type": "dropShadow",
           "x": "0",
           "y": "8",
           "blur": "10",
           "spread": "0"
         },
-        "type": "boxShadow",
-        "description": "Shadow 1"
+        "type": "boxShadow"
       },
       "2": {
         "value": {
           "color": "#00000040",
-          "type": "dropShadow",
           "x": "0",
           "y": "4",
           "blur": "14",
           "spread": "0"
         },
-        "type": "boxShadow",
-        "description": "Shadow 2"
+        "type": "boxShadow"
       },
       "3": {
         "value": {
           "color": "#09051f99",
-          "type": "dropShadow",
           "x": "0",
           "y": "5",
           "blur": "30",
           "spread": "0"
         },
-        "type": "boxShadow",
-        "description": "Shadow 3"
+        "type": "boxShadow"
       },
       "4": {
         "value": {
           "color": "#0000001a",
-          "type": "dropShadow",
           "x": "0",
           "y": "5",
           "blur": "20",
           "spread": "0"
         },
-        "type": "boxShadow",
-        "description": "Shadow 4"
+        "type": "boxShadow"
       },
       "5": {
         "value": {
           "color": "#09051f26",
-          "type": "dropShadow",
           "x": "0",
           "y": "5",
           "blur": "25",
           "spread": "0"
         },
-        "type": "boxShadow",
-        "description": "Shadow 5"
+        "type": "boxShadow"
       },
       "6": {
         "value": {
@@ -131,11 +122,9 @@
           "y": "5",
           "blur": "25",
           "spread": "0",
-          "color": "rgba(9,5,31,0.62)",
-          "type": "dropShadow"
+          "color": "rgba(9,5,31,0.62)"
         },
-        "type": "boxShadow",
-        "description": "Shadow 5"
+        "type": "boxShadow"
       }
     }
   },
@@ -146,19 +135,17 @@
     }
   },
   "fontWeight": {
-    "sf-pro": {
-      "0": {
-        "value": "Regular",
-        "type": "fontWeights"
-      },
-      "1": {
-        "value": "Semibold",
-        "type": "fontWeights"
-      },
-      "2": {
-        "value": "Bold",
-        "type": "fontWeights"
-      }
+    "regular": {
+      "value": "400",
+      "type": "fontWeights"
+    },
+    "semibold": {
+      "value": "600",
+      "type": "fontWeights"
+    },
+    "bold": {
+      "value": "700",
+      "type": "fontWeights"
     }
   },
   "lineHeight": {
@@ -221,143 +208,120 @@
     "primary": {
       "100": {
         "value": "#3a3a5e",
-        "type": "color",
-        "description": "#3A3A5E\nPrimary color"
+        "type": "color"
       }
     },
     "overlay": {
       "100": {
         "value": "rgba(2,2,5,0.6)",
-        "type": "color",
-        "description": "#020205\nOverlay"
+        "type": "color"
       }
     },
     "secondary": {
       "100": {
         "dark": {
           "value": "#ffffff",
-          "type": "color",
-          "description": "#FFFFFF\nSecondary 5 color"
+          "type": "color"
         },
         "light": {
           "value": "#f4f7fa",
-          "type": "color",
-          "description": "#F4F7FA\nLight background secondary 2 color"
+          "type": "color"
         }
       },
       "200": {
         "dark": {
           "value": "#e4ebf4",
-          "type": "color",
-          "description": "#E4EBF4\nSecondary 4 color"
+          "type": "color"
         },
         "light": {
           "value": "#252941",
-          "type": "color",
-          "description": "#252941\nLight background secondary 1 color"
+          "type": "color"
         }
       },
       "300": {
         "dark": {
           "value": "#38619d",
-          "type": "color",
-          "description": "#38619D\nSecondary 2 color"
+          "type": "color"
         }
       },
       "400": {
         "dark": {
           "value": "#435a7f",
-          "type": "color",
-          "description": "#435A7F\nSecondary 3 color"
+          "type": "color"
         }
       },
       "500": {
         "dark": {
           "value": "#252941",
-          "type": "color",
-          "description": "#252941\nSecondary 1 color"
+          "type": "color"
         }
       }
     },
     "gradient": {
       "100": {
         "value": "linear-gradient(180deg, #3a3a5e 0%, #282844 50%, #0e152d 100%)",
-        "type": "color",
-        "description": "#3A3A5E, #282844, #0E152D\nPrimary gradient for screen background"
+        "type": "color"
       },
       "200": {
         "value": "linear-gradient(180deg, #435a7fbf 0%, #252941 100%)",
-        "type": "color",
-        "description": "#435A7F (75%), #242941\nGradient 1 color used for results background"
+        "type": "color"
       },
       "300": {
         "value": "linear-gradient(180deg, #050a254d 0%, #050a2500 100%)",
-        "type": "color",
-        "description": "#050A25 (30%), #050A25 (0%)"
+        "type": "color"
       },
       "400": {
         "value": "linear-gradient(180deg, #050a251a 0%, #050a2500 100%)",
-        "type": "color",
-        "description": "#050A25 (10%), #050A25 (0%)"
+        "type": "color"
       },
       "500": {
         "value": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)",
-        "type": "color",
-        "description": "#C78FFF, #38D7FF\nBorder color for cards"
+        "type": "color"
       },
       "600": {
         "value": "linear-gradient(143deg, #c78fff 0%, #ff84dd 100%)",
-        "type": "color",
-        "description": "#C78FFF, #FF84DD\nBackground color for icons used in card results"
+        "type": "color"
       }
     },
     "alert": {
       "success": {
         "dark": {
           "value": "#aae1d4",
-          "type": "color",
-          "description": "#AAE1D4\nSuccess color"
+          "type": "color"
         },
         "light": {
           "value": "#09955b",
-          "type": "color",
-          "description": "#09955B\nSuccess color"
+          "type": "color"
         }
       },
       "info": {
         "dark": {
           "value": "#38d7ff",
-          "type": "color",
-          "description": "#38D7FF\nInfo color & links color on dark background"
+          "type": "color"
         },
         "light": {
           "value": "#1d62d7",
-          "type": "color",
-          "description": "#1D62D7\nInfo color & body links on light background"
+          "type": "color"
         }
       },
       "pending": {
         "dark": {
           "value": "#f8d28f",
-          "type": "color",
-          "description": "#F8D28F\nPending color also used for warnings"
+          "type": "color"
         },
         "light": {
           "value": "#a86500",
-          "type": "color",
-          "description": "#A86500\nPending color"
+          "type": "color"
         }
       },
       "error": {
         "dark": {
           "value": "#f08b8a",
-          "type": "color",
-          "description": "#F08B8A\nError color & alert color"
+          "type": "color"
         },
         "light": {
           "value": "#cf413e",
-          "type": "color",
-          "description": "#CF413E\nError color & alert color"
+          "type": "color"
         }
       }
     },
@@ -365,37 +329,31 @@
       "100": {
         "dark": {
           "value": "#a4a8b6",
-          "type": "color",
-          "description": "#A4A8B6\nAccent 3 color"
+          "type": "color"
         },
         "light": {
           "value": "#6d7588",
-          "type": "color",
-          "description": "#6D7588\nAccent 3 color"
+          "type": "color"
         }
       },
       "200": {
         "dark": {
           "value": "#ff84dd",
-          "type": "color",
-          "description": "#FF84DD\nAccent 2 color"
+          "type": "color"
         },
         "light": {
           "value": "#9e00ff",
-          "type": "color",
-          "description": "#9E00FF\nAccent 1 color"
+          "type": "color"
         }
       },
       "300": {
         "dark": {
           "value": "#c78fff",
-          "type": "color",
-          "description": "#C78FFF\nAccent 1 color"
+          "type": "color"
         },
         "light": {
           "value": "#c20098",
-          "type": "color",
-          "description": "#C20098\nAccent 2 color"
+          "type": "color"
         }
       }
     }
@@ -469,8 +427,8 @@
   "background": {
     "blur": {
       "value": "40px",
-      "type": "dimension",
-      "description": "Blur for Overlay component"
+      "type": "dimension"
     }
   }
+}
 }
