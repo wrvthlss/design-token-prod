@@ -1,0 +1,18 @@
+{
+  "button": {
+    "textColor": {
+      "value": "{global.colors.primary}",
+      "type": "color"
+    },
+    "fontWeight": {
+      "value": "{global.fontWeight.bold}",
+      "type": "fontWeight"
+    }
+  },
+  "header": {
+    "fontSize": {
+      "value": "{global.fontSize.sm}",
+      "type": "fontSize"
+    }
+  }
+}

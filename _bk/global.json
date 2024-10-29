@@ -1,0 +1,16 @@
+{
+  "global": {
+    "fontSize": {
+      "xs": { "value": "12px", "type": "fontSize" },
+      "sm": { "value": "14px", "type": "fontSize" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400", "type": "fontWeight" },
+      "bold": { "value": "700", "type": "fontWeight" }
+    },
+    "colors": {
+      "primary": { "value": "#3a3a5e", "type": "color" },
+      "secondary": { "value": "#ffffff", "type": "color" }
+    }
+  }
+}
