@@ -1,27 +1,37 @@
 {
   "source": ["tokens/*.json"],
   "preprocessors": ["tokens-studio"],
+  "log": {
+    "verbosity": "verbose"
+  },
   "platforms": {
     "web": {
-      "transformGroup": "css",
+      "transformGroup": "tokens-studio/web",
       "buildPath": "build/web/",
       "files": [
         {
           "destination": "variables.css",
-          "format": "css/variables",
-          "options": {
-            "outputReferences": true
-          }
+          "format": "css/variables"
         }
       ]
     },
     "json": {
-      "transformGroup": "css",
+      "transformGroup": "tokens-studio/json",
       "buildPath": "build/json/",
       "files": [
         {
           "destination": "variables.json",
           "format": "json/flat"
+        }
+      ]
+    },
+    "reactNative": {
+      "transformGroup": "tokens-studio/reactNative",
+      "buildPath": "build/react-native/",
+      "files": [
+        {
+          "destination": "variables.js",
+          "format": "javascript/es6-modified"
         }
       ]
     }
