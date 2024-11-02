@@ -10,7 +10,7 @@
       "3xl": { "value": "32", "type": "fontSize" }
     },
     "borderRadius": {
-      "none_radius": { "value": "0", "type": "dimension" },
+      "none": { "value": "0", "type": "dimension" },
       "rounded_sm": { "value": "2", "type": "dimension" },
       "rounded_md": { "value": "5", "type": "dimension" },
       "rounded_lg": { "value": "10", "type": "dimension" },
@@ -20,7 +20,7 @@
       "rounded_full": { "value": "9999", "type": "dimension" }
     },
     "shadows": {
-      "shadow_1": { "value": "0px 8 10 0 rgba(0, 0, 0, 0.1)", "type": "shadow"},
+      "shadow_1": { "value": "0px 8px 10px 0 rgba(0, 0, 0, 0.1)", "type": "shadow"},
       "shadow_2": { "value": "0px 4px 14px 0 rgba(0, 0, 0, 0.25)", "type": "shadow"},
       "shadow_3": { "value": "0px 5px 30px 0 rgba(9, 5, 31, 0.6)", "type": "shadow"},
       "shadow_4": { "value": "0px 5px 20px 0 rgba(0, 0, 0, 0.1)", "type": "shadow"},
@@ -32,7 +32,7 @@
     },
     "fontWeight": {
       "regular": { "value": "400", "type": "fontWeights" },
-      "semiBold": { "value": "600", "type": "fontWeights" },
+      "semibold": { "value": "600", "type": "fontWeights" },
       "bold": { "value": "700", "type": "fontWeights" }
     },
     "lineHeight": {
@@ -53,8 +53,8 @@
       "2": { "value": "0", "type": "letterSpacing" }
     },
     "colors": {
-      "primary": { "primary_100": { "value": "#3a3a5e", "type": "color" } },
-      "overlay": { "overlay_100": { "value": "rgba(2,2,5,0.6)", "type": "color" } },
+      "primary": { "100": { "value": "#3a3a5e", "type": "color" } },
+      "overlay": { "100": { "value": "rgba(2,2,5,0.6)", "type": "color" } },
       "secondary": {
         "100": {
           "dark": { "value": "#ffffff", "type": "color" },
@@ -127,7 +127,7 @@
       "025": { "value": "2", "type": "dimension" },
       "050": { "value": "4", "type": "dimension" } },
     "background": {
-      "blur_background": {
+      "blur": {
         "value": "40", "type": "dimension"
       }
     }
