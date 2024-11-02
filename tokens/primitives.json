@@ -12,7 +12,7 @@
     "borderRadius": {
       "none": { "value": "0", "type": "dimension" },
       "rounded_sm": { "value": "2", "type": "dimension" },
-      "rounded_md": { "value": "99", "type": "dimension" },
+      "rounded_md": { "value": "5", "type": "dimension" },
       "rounded_lg": { "value": "10", "type": "dimension" },
       "rounded_xl": { "value": "15", "type": "dimension" },
       "rounded_2xl": { "value": "20", "type": "dimension" },
