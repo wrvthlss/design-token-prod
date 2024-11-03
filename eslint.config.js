@@ -8,8 +8,14 @@ export default [
   prettierConfig,
 
   {
-    env: {
-      node: true, // Enable Node.js global variables and environment
+    languageOptions: {
+      globals: {
+        __dirname: 'readonly',
+        process: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
     },
     plugins: {
       prettier,
