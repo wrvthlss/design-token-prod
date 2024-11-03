@@ -12,7 +12,7 @@
     "borderRadius": {
       "none": { "value": "0", "type": "dimension" },
       "rounded_sm": { "value": "2", "type": "dimension" },
-      "rounded_md": { "value": "5", "type": "dimension" },
+      "rounded_md": { "value": "9", "type": "dimension" },
       "rounded_lg": { "value": "10", "type": "dimension" },
       "rounded_xl": { "value": "15", "type": "dimension" },
       "rounded_2xl": { "value": "20", "type": "dimension" },
@@ -20,12 +20,30 @@
       "rounded_full": { "value": "9999", "type": "dimension" }
     },
     "shadows": {
-      "shadow_1": { "value": "0px 8px 10px 0 rgba(0, 0, 0, 0.1)", "type": "shadow"},
-      "shadow_2": { "value": "0px 4px 14px 0 rgba(0, 0, 0, 0.25)", "type": "shadow"},
-      "shadow_3": { "value": "0px 5px 30px 0 rgba(9, 5, 31, 0.6)", "type": "shadow"},
-      "shadow_4": { "value": "0px 5px 20px 0 rgba(0, 0, 0, 0.1)", "type": "shadow"},
-      "shadow_5": { "value": "0px 5px 25px 0 rgba(9, 5, 31, 0.15)", "type": "shadow"},
-      "shadow_6": { "value": "0px 5px 25px 0 rgba(9, 5, 31, 0.62)", "type": "shadow"}
+      "shadow_1": {
+        "value": "0px 8px 10px 0 rgba(0, 0, 0, 0.1)",
+        "type": "shadow"
+      },
+      "shadow_2": {
+        "value": "0px 4px 14px 0 rgba(0, 0, 0, 0.25)",
+        "type": "shadow"
+      },
+      "shadow_3": {
+        "value": "0px 5px 30px 0 rgba(9, 5, 31, 0.6)",
+        "type": "shadow"
+      },
+      "shadow_4": {
+        "value": "0px 5px 20px 0 rgba(0, 0, 0, 0.1)",
+        "type": "shadow"
+      },
+      "shadow_5": {
+        "value": "0px 5px 25px 0 rgba(9, 5, 31, 0.15)",
+        "type": "shadow"
+      },
+      "shadow_6": {
+        "value": "0px 5px 25px 0 rgba(9, 5, 31, 0.62)",
+        "type": "shadow"
+      }
     },
     "fontFamily": {
       "sf_pro": { "value": "SF Pro", "type": "fontFamilies" }
@@ -69,12 +87,30 @@
         "500": { "dark": { "value": "#252941", "type": "color" } }
       },
       "gradient": {
-        "100": { "value": "linear-gradient(180deg, #3a3a5e 0%, #282844 50%, #0e152d 100%)", "type": "color" },
-        "200": { "value": "linear-gradient(180deg, #435a7fbf 0%, #252941 100%)", "type": "color" },
-        "300": { "value": "linear-gradient(180deg, #050a254d 0%, #050a2500 100%)", "type": "color" },
-        "400": { "value": "linear-gradient(180deg, #050a251a 0%, #050a2500 100%)", "type": "color" },
-        "500": { "value": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)", "type": "color" },
-        "600": { "value": "linear-gradient(143deg, #c78fff 0%, #ff84dd 100%)", "type": "color" }
+        "100": {
+          "value": "linear-gradient(180deg, #3a3a5e 0%, #282844 50%, #0e152d 100%)",
+          "type": "color"
+        },
+        "200": {
+          "value": "linear-gradient(180deg, #435a7fbf 0%, #252941 100%)",
+          "type": "color"
+        },
+        "300": {
+          "value": "linear-gradient(180deg, #050a254d 0%, #050a2500 100%)",
+          "type": "color"
+        },
+        "400": {
+          "value": "linear-gradient(180deg, #050a251a 0%, #050a2500 100%)",
+          "type": "color"
+        },
+        "500": {
+          "value": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)",
+          "type": "color"
+        },
+        "600": {
+          "value": "linear-gradient(143deg, #c78fff 0%, #ff84dd 100%)",
+          "type": "color"
+        }
       },
       "alert": {
         "success": {
@@ -125,10 +161,12 @@
       "1000": { "value": "80", "type": "dimension" },
       "1600": { "value": "128", "type": "dimension" },
       "025": { "value": "2", "type": "dimension" },
-      "050": { "value": "4", "type": "dimension" } },
+      "050": { "value": "4", "type": "dimension" }
+    },
     "background": {
       "blur": {
-        "value": "40", "type": "dimension"
+        "value": "40",
+        "type": "dimension"
       }
     }
   }

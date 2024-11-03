@@ -50,12 +50,37 @@
   --global-colors-secondary-300-dark: #38619d;
   --global-colors-secondary-400-dark: #435a7f;
   --global-colors-secondary-500-dark: #252941;
-  --global-colors-gradient-100: linear-gradient(180deg, #3a3a5e 0%, #282844 50%, #0e152d 100%);
-  --global-colors-gradient-200: linear-gradient(180deg, #435a7fbf 0%, #252941 100%);
-  --global-colors-gradient-300: linear-gradient(180deg, #050a254d 0%, #050a2500 100%);
-  --global-colors-gradient-400: linear-gradient(180deg, #050a251a 0%, #050a2500 100%);
-  --global-colors-gradient-500: linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
-  --global-colors-gradient-600: linear-gradient(143deg, #c78fff 0%, #ff84dd 100%);
+  --global-colors-gradient-100: linear-gradient(
+    180deg,
+    #3a3a5e 0%,
+    #282844 50%,
+    #0e152d 100%
+  );
+  --global-colors-gradient-200: linear-gradient(
+    180deg,
+    #435a7fbf 0%,
+    #252941 100%
+  );
+  --global-colors-gradient-300: linear-gradient(
+    180deg,
+    #050a254d 0%,
+    #050a2500 100%
+  );
+  --global-colors-gradient-400: linear-gradient(
+    180deg,
+    #050a251a 0%,
+    #050a2500 100%
+  );
+  --global-colors-gradient-500: linear-gradient(
+    180deg,
+    #c78fff 0%,
+    #38d7ff 100%
+  );
+  --global-colors-gradient-600: linear-gradient(
+    143deg,
+    #c78fff 0%,
+    #ff84dd 100%
+  );
   --global-colors-alert-success-dark: #aae1d4;
   --global-colors-alert-success-light: #09955b;
   --global-colors-alert-info-dark: #38d7ff;
@@ -117,7 +142,8 @@
   --textarea-text-font-size: 14px;
   --textarea-text-line-height: 20px;
   --textarea-border-radius-border-radius: 5px;
-  --card-border-large: 1px solid linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
+  --card-border-large: 1px solid
+    linear-gradient(180deg, #c78fff 0%, #38d7ff 100%);
   --card-background-default: #435a7f;
   --card-fill-large-outline: #252941;
   --card-border-radius: 10px;

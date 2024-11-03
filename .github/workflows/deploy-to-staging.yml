@@ -29,6 +29,15 @@ jobs:
       - name: Validate colors
         run: node validate-colors.js
 
+      - name: Check for dead references
+        run: node check-references.js
+
+      - name: Prettier formatting
+        run: npm run format
+
+      - name: Static code analysis
+        run: npm run lint
+
       - name: Build tokens
         run: npm run build
 
