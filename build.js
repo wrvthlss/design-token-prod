@@ -2,8 +2,8 @@ import StyleDictionary from 'style-dictionary';
 import {
   register,
 } from '@tokens-studio/sd-transforms';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+// import { dirname } from 'path';
+// import { fileURLToPath } from 'url';
 import { validateColors } from './validate-colors.js';
 
 
