@@ -14,7 +14,7 @@ try {
   // Register tokens-studio transforms (asynchronously)
   await register(StyleDictionary);
 
-  // console.log('Tokens-studio Transforms Registered Successfully');
+  console.log('Tokens-studio Transforms Registered Successfully');
 
   // Validate colors before building
   await validateColors();
