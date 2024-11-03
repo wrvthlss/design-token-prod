@@ -6,7 +6,6 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { validateColors } from './validate-colors.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // console.log('Build started...');
 // console.log('\n==============================================');
@@ -78,7 +77,7 @@ try {
   await sd.buildAllPlatforms();
   // console.log('\n==============================================');
   // console.log('Build completed!');
-} catch (error) {
+} catch {
   // console.error('Error during build:', error);
   process.exit(1);
 }
