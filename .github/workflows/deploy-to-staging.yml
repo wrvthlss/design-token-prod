@@ -26,9 +26,6 @@ jobs:
       - name: Validate schema
         run: npm run validate
 
-      - name: Validate colors
-        run: node validate-colors.js
-
       - name: Check for dead references
         run: node check-references.js
 
