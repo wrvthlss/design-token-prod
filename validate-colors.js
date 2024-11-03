@@ -44,6 +44,7 @@ export async function validateColors() {
 // import StyleDictionary from 'style-dictionary';
 // import { register } from '@tokens-studio/sd-transforms';
 //
+//
 // // Register Tokens Studio transforms
 // register(StyleDictionary);
 //

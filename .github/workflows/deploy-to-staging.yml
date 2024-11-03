@@ -32,7 +32,7 @@ jobs:
       - name: Prettier formatting
         run: npm run format
 
-      - name: Static code analysis
+      - name: Linter
         run: npm run lint
 
       - name: Build tokens
