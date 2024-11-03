@@ -1,8 +1,6 @@
 import StyleDictionary from 'style-dictionary';
 import {
-  getTransforms,
   register,
-  transformShadow,
 } from '@tokens-studio/sd-transforms';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -10,14 +8,14 @@ import { validateColors } from './validate-colors.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-console.log('Build started...');
-console.log('\n==============================================');
+// console.log('Build started...');
+// console.log('\n==============================================');
 
 try {
   // Register tokens-studio transforms (asynchronously)
   await register(StyleDictionary);
 
-  console.log('Tokens-studio Transforms Registered Successfully');
+  // console.log('Tokens-studio Transforms Registered Successfully');
 
   // Validate colors before building
   await validateColors();
@@ -78,9 +76,9 @@ try {
   });
 
   await sd.buildAllPlatforms();
-  console.log('\n==============================================');
-  console.log('Build completed!');
+  // console.log('\n==============================================');
+  // console.log('Build completed!');
 } catch (error) {
-  console.error('Error during build:', error);
+  // console.error('Error during build:', error);
   process.exit(1);
 }

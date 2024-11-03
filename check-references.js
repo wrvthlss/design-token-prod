@@ -7,7 +7,7 @@ function readJson(filePath) {
     const data = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(data);
   } catch (error) {
-    console.error(`Error reading file at ${filePath}:`, error);
+    process.stderr.write(`Error reading file at ${filePath}: ${error.message}\n`);
     return null;
   }
 }
@@ -88,15 +88,15 @@ function main() {
 
   // Report results
   if (deadReferences.length > 0) {
-    console.log('Dead references found:');
+    process.stdout.write('Dead references found:\n');
     deadReferences.forEach((ref) => {
-      console.log(
-        `- Token: ${ref.token} | Invalid Reference: ${ref.reference}`,
+      process.stdout.write(
+        `- Token: ${ref.token} | Invalid Reference: ${ref.reference}\n`
       );
     });
     process.exit(1); // Exit with an error code to signal failure
   } else {
-    console.log('No dead references found. All references are valid!');
+    process.stdout.write('No dead references found. All references are valid!\n');
   }
 }
 

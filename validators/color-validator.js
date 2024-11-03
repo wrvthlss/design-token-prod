@@ -10,6 +10,9 @@ export function validateColorFormat(color) {
     hexPattern.test(color) ||
     rgbaPattern.test(color) ||
     gradientPattern.test(color);
-  console.log(`Validating color: ${color} - isValid: ${isValid}`); // Log each color and its validation result
+
+  // Replace console.log with process.stderr.write for error/debug logging
+  process.stderr.write(`Validating color: ${color} - isValid: ${isValid}\n`);
+
   return isValid;
 }
