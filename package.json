@@ -2,19 +2,44 @@
   "name": "design-token-prod",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/json/variables.json",
+  "style": "build/css/variables.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "style-dictionary build",
-    "validate": "ajv validate -s schemas/token-schema.json -d 'tokens/*.json'"
+    "build": "node build.js",
+    "validate": "ajv validate -s schemas/token-schema.json -d 'tokens/*.json'",
+    "format": "prettier --write .",
+    "lint": "eslint . '**/*{js,jsx,ts,tsx}'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "design-tokens",
+    "style-dictionary",
+    "css-variables",
+    "tokens"
+  ],
+  "author": "Wes Gonzales",
   "license": "ISC",
-  "description": "",
+  "description": "A production-ready design token package for consistent styling across platforms.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrvthlss/design-token-prod.git"
+  },
+  "files": [
+    "build/css/variables.css",
+    "build/json/variables.json",
+    "README.md"
+  ],
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "ajv": "^8.17.1",
-    "ajv-cli": "^5.0.0"
+    "ajv-cli": "^5.0.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
   },
   "dependencies": {
     "@tokens-studio/sd-transforms": "^1.2.6",

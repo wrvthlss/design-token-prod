@@ -3,372 +3,160 @@
   "title": "Token Schema",
   "type": "object",
   "properties": {
-    "fontSize": {
+    "global": {
       "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "borderRadius": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9-]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "colors": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9]+$": {
+      "properties": {
+        "fontSize": {
           "type": "object",
           "patternProperties": {
-            "^[a-zA-Z0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "shadows": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9]+$": {
-          "type": "object",
-          "properties": {
-            "value": {
+            "^[a-zA-Z0-9]+$": {
               "type": "object",
               "properties": {
-                "color": { "type": "string" },
-                "type": { "type": "string" },
-                "x": { "type": "string" },
-                "y": { "type": "string" },
-                "blur": { "type": "string" },
-                "spread": { "type": "string" }
+                "value": { "type": "string" },
+                "type": { "type": "string" }
               },
-              "required": ["color", "type", "x", "y", "blur", "spread"]
+              "required": ["value", "type"]
             }
           }
-        }
-      }
-    },
-    "fontFamily": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9-]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "fontWeight": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9-]+$": {
+        },
+        "borderRadius": {
           "type": "object",
           "patternProperties": {
-            "^[0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
+            "^[a-zA-Z0-9-]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
           }
-        }
-      }
-    },
-    "lineHeight": {
-      "type": "object",
-      "patternProperties": {
-        "^[0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "letterSpacing": {
-      "type": "object",
-      "patternProperties": {
-        "^[0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "spacing": {
-      "type": "object",
-      "patternProperties": {
-        "^[0-9]+$": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "background": {
-      "type": "object",
-      "properties": {
-        "blur": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "input": {
-      "type": "object",
-      "properties": {
-        "border": {
+        },
+        "colors": {
           "type": "object",
           "patternProperties": {
             "^[a-zA-Z0-9]+$": {
               "type": "object",
-              "properties": {
-                "value": { "type": "object" }
+              "patternProperties": {
+                "^[a-zA-Z0-9]+$": {
+                  "type": "object",
+                  "properties": {
+                    "value": { "type": "string" },
+                    "type": { "type": "string" }
+                  },
+                  "anyOf": [
+                    { "required": ["value", "type"] },
+                    { "additionalProperties": true }
+                  ]
+                }
               }
             }
           }
         },
-        "icon": {
+        "shadows": {
           "type": "object",
           "patternProperties": {
             "^[a-zA-Z0-9]+$": {
               "type": "object",
               "properties": {
-                "value": { "type": "string" }
-              }
+                "value": { "type": "string" },
+                "type": { "type": "string" },
+                "description": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        },
+        "fontFamily": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9-]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        },
+        "fontWeight": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9-]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        },
+        "lineHeight": {
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        },
+        "letterSpacing": {
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
             }
           }
         },
         "background": {
           "type": "object",
           "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fontWeight": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "checkbox": {
-      "type": "object",
-      "properties": {
-        "border": {
-          "type": "object",
-          "patternProperties": {
-            "^[a-zA-Z0-9]+$": {
+            "blur": {
               "type": "object",
               "properties": {
-                "value": { "type": "object" }
-              }
-            }
-          }
-        },
-        "fill": {
-          "type": "object",
-          "properties": {
-            "selcted": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "label": {
-          "type": "object",
-          "properties": {
-            "fill": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fontWeight": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "radio": {
-      "type": "object",
-      "properties": {
-        "border": {
-          "type": "object",
-          "patternProperties": {
-            "^[a-zA-Z0-9]+$": {
-              "type": "object",
-              "properties": {
-                "value": { "type": "object" }
-              }
-            }
-          }
-        },
-        "fill": {
-          "type": "object",
-          "properties": {
-            "selcted": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fontWeight": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "textarea": {
-      "type": "object",
-      "properties": {
-        "border": {
-          "type": "object",
-          "patternProperties": {
-            "^[a-zA-Z0-9]+$": {
-              "type": "object",
-              "properties": {
-                "value": { "type": "object" }
-              }
-            }
-          }
-        },
-        "icon": {
-          "type": "object",
-          "patternProperties": {
-            "^[a-zA-Z0-9]+$": {
-              "type": "object",
-              "properties": {
-                "value": { "type": "string" }
-              }
-            }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fontWeight": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "card": {
-      "type": "object",
-      "properties": {
-        "border": {
-          "type": "object",
-          "properties": {
-            "large": {
-              "type": "object",
-              "properties": {
-                "outline": { "type": "object", "properties": { "value": { "type": "object" } } }
-              }
-            }
-          }
-        },
-        "background": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "fill": {
-          "type": "object",
-          "properties": {
-            "large": {
-              "type": "object",
-              "properties": {
-                "outline": { "type": "object", "properties": { "value": { "type": "string" } } }
-              }
+                "value": { "type": "string" },
+                "type": { "type": "string" }
+              },
+              "required": ["value", "type"]
             }
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
-    "button": {
-      "type": "object",
-      "properties": {
-        "border": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "object" } } }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fill": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontWeight-small": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontWeight-large": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize-small": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize-large": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight-small": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "lineHeight-large": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "icon": {
-          "type": "object",
-          "properties": {
-            "fill": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "borderRadius-small": { "type": "object", "properties": { "value": { "type": "string" } } },
-        "borderRadius-large": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    },
-    "divider": {
-      "type": "object",
-      "properties": {
-        "fill": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "width": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "cta": {
-      "type": "object",
-      "properties": {
-        "icon": {
-          "type": "object",
-          "properties": {
-            "fill": {
-              "type": "object",
-              "properties": {
-                "default": { "type": "object", "properties": { "value": { "type": "string" } } },
-                "alt": { "type": "object", "properties": { "value": { "type": "string" } } }
-              }
-            }
-          }
-        },
-        "label": {
-          "type": "object",
-          "properties": {
-            "fill": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "text": {
-          "type": "object",
-          "properties": {
-            "fontWeight": { "type": "object", "properties": { "value": { "type": "string" } } },
-            "fontSize": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        }
-      }
-    },
-    "modal": {
-      "type": "object",
-      "properties": {
-        "icon": {
-          "type": "object",
-          "properties": {
-            "fill": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "background": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "dropshadow": {
-          "type": "object",
-          "properties": {
-            "default": { "type": "object", "properties": { "value": { "type": "string" } } }
-          }
-        },
-        "borderRadius-topLeft": { "type": "object", "properties": { "value": { "type": "string" } } },
-        "borderRadius-topRight": { "type": "object", "properties": { "value": { "type": "string" } } },
-        "borderRadius-bottomRight": { "type": "object", "properties": { "value": { "type": "string" } } },
-        "borderRadius-bottomLeft": { "type": "object", "properties": { "value": { "type": "string" } } }
-      }
-    }
+    "input": { "type": "object" },
+    "checkbox": { "type": "object" },
+    "radio": { "type": "object" },
+    "textarea": { "type": "object" },
+    "card": { "type": "object" },
+    "button": { "type": "object" },
+    "divider": { "type": "object" },
+    "cta": { "type": "object" },
+    "modal": { "type": "object" }
   },
   "additionalProperties": false
 }

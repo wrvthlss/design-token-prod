@@ -1,91 +1,83 @@
 import StyleDictionary from 'style-dictionary';
-import { register } from '@tokens-studio/sd-transforms';
+import {
+  register,
+} from '@tokens-studio/sd-transforms';
+// import { dirname } from 'path';
+// import { fileURLToPath } from 'url';
 import { validateColors } from './validate-colors.js';
 
-// Register Tokens Studio transforms explicitly on the StyleDictionary instance
-register(StyleDictionary, {
-    excludeParentKeys: true,   // Example option for excluding parent keys in token files
-    platform: 'css',           // Platform to apply the transforms for
-    name: 'tokens-studio'
-});
 
-// Validate colors before building
-await validateColors();
+// console.log('Build started...');
+// console.log('\n==============================================');
 
-// Initialize Style Dictionary with configuration
-const styleDictionary = new StyleDictionary({
+try {
+  // Register tokens-studio transforms (asynchronously)
+  await register(StyleDictionary);
+
+  //console.log('Tokens-studio Transforms Registered Successfully');
+
+  // Validate colors before building
+  await validateColors();
+
+  StyleDictionary.registerTransform({
+    name: 'stripUnits',
+    type: 'value',
+    filter: function (token) {
+      return (
+        (token.type === 'dimension' || token.type === 'fontSize') &&
+        typeof token.value === 'string' &&
+        token.value.match(/px|em|rem|%$/)
+      );
+    },
+    transform: function (token) {
+      return parseFloat(token.value);
+    },
+  });
+
+  // Initialize Style Dictionary instance with inlined configuration
+  const sd = new StyleDictionary({
     source: ['tokens/*.json'],
     platforms: {
-        css: {
-            transformGroup: 'css',
-            buildPath: 'build/css/',
-            files: [
-                {
-                    destination: 'variables.css',
-                    format: 'css/variables',
-                },
-            ],
-        },
-        json: {
-            transformGroup: 'css',
-            buildPath: 'build/json/',
-            files: [
-                {
-                    destination: 'variables.json',
-                    format: 'json/flat',
-                },
-            ],
-        },
+      css: {
+        transformGroup: 'tokens-studio',
+        transforms: ['ts/size/px', 'attribute/cti', 'name/kebab'],
+        buildPath: 'build/web/',
+        files: [
+          {
+            destination: 'variables.css',
+            format: 'css/variables',
+          },
+        ],
+      },
+      json: {
+        transformGroup: 'tokens-studio',
+        transforms: ['attribute/cti', 'name/kebab'],
+        buildPath: 'build/json/',
+        files: [
+          {
+            destination: 'variables.json',
+            format: 'json/flat',
+          },
+        ],
+      },
+      reactNative: {
+        transformGroup: 'tokens-studio',
+        transforms: ['stripUnits'],
+        buildPath: 'build/react-native/',
+        files: [
+          {
+            destination: 'variables.js',
+            format: 'javascript/es6',
+          },
+        ],
+      },
     },
-    log: {
-        verbosity: 'verbose',
-        errors: {
-            brokenReferences: 'throw',
-        },
-    },
-});
+  });
 
-// Clean all platforms and then build
-await styleDictionary.cleanAllPlatforms();
-await styleDictionary.buildAllPlatforms();
-
-// import StyleDictionary from 'style-dictionary';
-// import { register } from '@tokens-studio/sd-transforms';
-// import { validateColors } from './validate-colors.js';
-//
-// // Register Tokens Studio transforms
-// register(StyleDictionary);
-//
-// // Validate colors before building
-// await validateColors();
-//
-// // Initialize Style Dictionary with configuration
-// const styleDictionary = new StyleDictionary({
-//     source: ['tokens/*.json'],
-//     preprocessors: ['tokens-studio'],
-//     platforms: {
-//         css: {
-//             transformGroup: 'tokens-studio',
-//             buildPath: 'build/css/',
-//             files: [
-//                 {
-//                     destination: 'variables.css',
-//                     format: 'css/variables',
-//                 },
-//             ],
-//         },
-//         json: {
-//             transformGroup: 'tokens-studio',
-//             buildPath: 'build/json/',
-//             files: [
-//                 {
-//                     destination: 'variables.json',
-//                     format: 'json/flat',
-//                 },
-//             ],
-//         },
-//     },
-// });
-//
-// // Build platforms
-// await styleDictionary.buildAllPlatforms();
+  await sd.buildAllPlatforms();
+  // console.log('\n==============================================');
+  // console.log('Build completed!');
+} catch {
+  // console.error('Error during build:', error);
+  process.exit(1);
+}
