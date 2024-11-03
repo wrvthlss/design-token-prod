@@ -22,12 +22,12 @@ export async function validateColors() {
   transformedTokens.allTokens.forEach((token) => {
     if (token.type === 'color') {
       const isValid = validateColorFormat(token.value);
-      console.log(
-        `Validating color token '${token.name}' with value '${token.value}' - isValid: ${isValid}`,
+      process.stdout.write(
+        `Validating color token '${token.name}' with value '${token.value}' - isValid: ${isValid}\n`,
       );
       if (!isValid) {
-        console.error(
-          `Validation Error: Invalid color format for token '${token.name}' with value '${token.value}'`,
+        process.stderr.write(
+          `Validation Error: Invalid color format for token '${token.name}' with value '${token.value}'\n`,
         );
         throw new Error(`Color validation failed for token '${token.name}'`);
       }
