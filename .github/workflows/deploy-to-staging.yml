@@ -38,6 +38,9 @@ jobs:
       - name: Build tokens
         run: npm run build
 
+      - name: Prettier formatting
+        run: npm run format
+
       - name: Sync files to S3
         run: |
           aws s3 sync ./build s3://token-staging
