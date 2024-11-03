@@ -8,6 +8,9 @@ export default [
   prettierConfig,
 
   {
+    env: {
+      node: true, // Enable Node.js global variables and environment
+    },
     plugins: {
       prettier,
     },
