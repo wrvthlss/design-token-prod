@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js",
-    "validate": "ajv validate -s schemas/token-schema.json -d 'tokens/*.json'",
+    "validate": "node schema-validate.js",
     "format": "prettier --write .",
     "lint": "eslint . '**/*{js,jsx,ts,tsx}'"
   },
@@ -42,6 +42,7 @@
     "prettier": "^3.3.3"
   },
   "dependencies": {
+    "@jirutka/ajv-cli": "^6.0.0-beta.5",
     "@tokens-studio/sd-transforms": "^1.2.6",
     "style-dictionary": "^4.1.4"
   }

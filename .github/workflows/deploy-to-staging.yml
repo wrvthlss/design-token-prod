@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Validate schema
-        run: npm run validate
+        run: node schema-validate.js
 
       - name: Check for dead references
         run: node check-references.js
