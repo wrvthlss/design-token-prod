@@ -10,8 +10,9 @@ dataFiles.forEach(file => {
   const data = JSON.parse(fs.readFileSync(path.join("tokens", file), "utf-8"));
   const validate = ajv.compile(schema);
   if (validate(data)) {
-    console.log(`${file} is valid.`);
+    process.stdout.write(`${file} is valid.\n`);
   } else {
-    console.error(`${file} is invalid:`, validate.errors);
+    process.stderr.write(`${file} is invalid:\n`);
+    process.stderr.write(JSON.stringify(validate.errors, null, 2) + '\n');
   }
 });
