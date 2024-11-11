@@ -1,7 +1,7 @@
 {
     "fontSize": {
       "xs": {
-        "value": "10",
+        "value": "12",
         "type": "fontSize"
       },
       "sm": {
