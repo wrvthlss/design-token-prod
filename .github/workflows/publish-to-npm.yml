@@ -39,6 +39,11 @@ jobs:
           git add .
           git commit -m "chore: commit build files"
 
+      - name: Verify npm Authentication
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Update Version
         id: versioning
         run: |
