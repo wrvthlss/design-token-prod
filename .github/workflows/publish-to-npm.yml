@@ -6,6 +6,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -32,7 +34,7 @@ jobs:
       - name: Build tokens
         run: npm run build
 
-      - name: Stage build changes
+      - name: Commit build changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -40,9 +42,7 @@ jobs:
           git commit -m "chore: commit build files" || echo "No changes to commit"
 
       - name: Verify npm Authentication
-        run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm whoami  # This should now authenticate correctly
 
       - name: Update Version
         id: versioning
@@ -52,8 +52,6 @@ jobs:
 
       - name: Publish to NPM
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Push version tag to GitHub
         run: |
