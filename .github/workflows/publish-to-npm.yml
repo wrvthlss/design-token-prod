@@ -41,6 +41,9 @@ jobs:
           git add .
           git commit -m "chore: commit build files" || echo "No changes to commit"
 
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+    
       - name: Verify npm Authentication
         run: npm whoami  # This should now authenticate correctly
 
