@@ -1,6 +1,5 @@
 name: Publish to NPM
 
-# Trigger this workflow manually from GitHub
 on:
   workflow_dispatch:
 
@@ -11,6 +10,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensures all history is fetched for tagging
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
@@ -31,6 +32,13 @@ jobs:
       - name: Build tokens
         run: npm run build
 
+      - name: Commit build changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore: commit build files"
+
       - name: Update Version
         id: versioning
         run: |
@@ -43,4 +51,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Push version tag to GitHub
-        run: git push origin --tags
+        run: |
+          git push origin --tags
+          git push origin HEAD:${{ github.ref }}
