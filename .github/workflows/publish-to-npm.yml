@@ -61,3 +61,5 @@ jobs:
         run: |
           git push origin --tags
           git push origin HEAD:${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
