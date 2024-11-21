@@ -16,7 +16,6 @@ try {
 
   //console.log('Tokens-studio Transforms Registered Successfully');
 
-  // Validate colors before building
   await validateColors();
 
   StyleDictionary.registerTransform({
@@ -34,7 +33,6 @@ try {
     },
   });
 
-  // Initialize Style Dictionary instance with inlined configuration
   const sd = new StyleDictionary({
     source: ['tokens/*.json'],
     platforms: {
