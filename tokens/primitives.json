@@ -1,11 +1,11 @@
 {
     "fontSize": {
       "xs": {
-        "value": "14",
+        "value": "12",
         "type": "fontSize"
       },
       "sm": {
-        "value": "16",
+        "value": "14",
         "type": "fontSize"
       },
       "md": {

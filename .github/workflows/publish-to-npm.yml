@@ -46,13 +46,13 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
     
       - name: Verify npm Authentication
-        run: npm whoami  # This should now authenticate correctly
+        run: npm whoami
 
       - name: Update Version
         id: versioning
         run: |
-          npm version patch -m "Release version %s"
-          echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+            npm version $(node -p "require('./package.json').version.match(/^\d+\.\d+\.\d+$/) ? 'patch' : '1.0.0'") --force -m "Release version %s"
+            echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
 
       - name: Publish to NPM
         run: npm publish
