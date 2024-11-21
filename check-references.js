@@ -88,6 +88,7 @@ function main() {
 
   // Report results
   if (deadReferences.length > 0) {
+    console.log("[-] ERROR")
     process.stdout.write('Dead references found:\n');
     deadReferences.forEach((ref) => {
       process.stdout.write(
