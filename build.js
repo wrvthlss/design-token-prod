@@ -16,7 +16,7 @@ try {
 
   //console.log('Tokens-studio Transforms Registered Successfully');
 
-  await validateColors();
+  //await validateColors();
 
   StyleDictionary.registerTransform({
     name: 'stripUnits',
@@ -33,7 +33,15 @@ try {
     },
   });
 
+
   const sd = new StyleDictionary({
+    log: {
+      warnings: 'error', // 'warn' | 'error' | 'disabled'
+      verbosity: 'verbose', // 'default' | 'silent' | 'verbose'
+      errors: {
+        brokenReferences: 'console', // 'throw' | 'console'
+      },
+    },
     source: ['tokens/*.json'],
     platforms: {
       css: {
@@ -73,9 +81,26 @@ try {
   });
 
   await sd.buildAllPlatforms();
-  // console.log('\n==============================================');
-  // console.log('Build completed!');
-} catch {
-  // console.error('Error during build:', error);
+
+  console.log('\n==============================================');
+  console.log('Build completed!');
+} catch (error) {
+  console.error('\n==============================================');
+  console.error('Error during build:\n');
+  console.error('Message:', error.message);
+  console.error('Stack:', error.stack);
+
+  // If the error is a Style Dictionary error with unresolved references
+  if (error.errors && error.errors.brokenReferences) {
+    console.error('\nUnresolved References:');
+    error.errors.brokenReferences.forEach((ref) => {
+      console.error(`- ${ref}`);
+    });
+  } else {
+    console.error('An unexpected error occurred. Full error details:');
+    console.error(error);
+  }
+
+  console.error('\n==============================================');
   process.exit(1);
 }

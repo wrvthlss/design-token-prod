@@ -1,6 +1,6 @@
 {
   "name": "design-token-prod",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -9,7 +9,7 @@
   "style": "build/css/variables.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
+    "build": "node build.js --verbose",
     "validate": "node schema-validate.js",
     "format": "prettier --write .",
     "lint": "eslint . '**/*{js,jsx,ts,tsx}'"

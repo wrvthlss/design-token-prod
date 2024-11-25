@@ -4,13 +4,17 @@
         "border": {
         "active": {
             "value": {
-            "color": "{colors.gradient.500}"
+            "color": "{colors.gradient.500}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         },
         "resting": {
             "value": {
-            "color": "{colors.accents.100.dark}"
+            "color": "{colors.accents.100.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         }
@@ -162,13 +166,17 @@
         "border": {
         "deselected": {
             "value": {
-            "color": "{colors.accents.100.dark}"
+            "color": "{colors.accents.100.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         },
         "selected": {
             "value": {
-            "color": "{colors.accents.300.dark}"
+            "color": "{colors.accents.300.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         },
@@ -228,7 +236,9 @@
         "border": {
         "deselected": {
             "value": {
-            "color": "{colors.accents.100.dark}"
+            "color": "{colors.accents.100.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         },
@@ -285,7 +295,9 @@
         "outline": {
             "large": {
             "value": {
-                "color": "{colors.gradient.500}"
+                "color": "{colors.gradient.500}",
+                "width": "",
+                "style": ""
             },
             "type": "border"
             }
@@ -356,7 +368,9 @@
         "border": {
         "default": {
             "value": {
-            "color": "{colors.secondary.100.dark}"
+            "color": "{colors.secondary.100.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         }
@@ -579,7 +593,7 @@
         },
         "dropshadow": {
         "default": {
-            "value": "{shadows.shadow_6}",
+            "value": "{shadows.shadow.6}",
             "type": "boxShadow"
         }
         },
@@ -720,7 +734,9 @@
         "border": {
         "active": {
             "value": {
-            "color": "{colors.gradient.500}"
+            "color": "{colors.gradient.500}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         }
@@ -936,13 +952,17 @@
         "border": {
         "active": {
             "value": {
-            "color": "{colors.gradient.500}"
+            "color": "{colors.gradient.500}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         },
         "resting": {
             "value": {
-            "color": "{colors.accents.100.dark}"
+            "color": "{colors.accents.100.dark}",
+            "width": "",
+            "style": ""
             },
             "type": "border"
         }
