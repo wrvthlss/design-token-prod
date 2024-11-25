@@ -16,7 +16,7 @@ try {
 
   //console.log('Tokens-studio Transforms Registered Successfully');
 
-  //await validateColors();
+  await validateColors();
 
   StyleDictionary.registerTransform({
     name: 'stripUnits',
@@ -84,7 +84,7 @@ try {
 
   // console.log('\n==============================================');
   // console.log('Build completed!');
-} catch (error) {
+} catch {
   // console.error('\n==============================================');
   // console.error('Error during build:\n');
   // console.error('Message:', error.message);
