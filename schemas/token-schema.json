@@ -10,7 +10,7 @@
           "type": "object",
           "properties": {
             "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["fontSize"] }
+            "type": { "type": "string", "enum": ["fontSizes"] }
           },
           "required": ["value", "type"]
         }
@@ -166,7 +166,7 @@
         }
       }
     },
-    "borderRadius": {
+    "border": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z0-9-]+$": {
@@ -181,6 +181,14 @@
     },
     "borderWidth": {
       "type": "object",
+      "properties": {
+        "value": { "type": "string" },
+        "type": { "type": "string", "enum": ["dimension"] }
+      },
+      "required": ["value", "type"]
+    },
+    "sizing": {
+      "type": "object",
       "patternProperties": {
         "^[0-9]+$": {
           "type": "object",
@@ -192,16 +200,63 @@
         }
       }
     },
-    "input": { "type": "object"},
-    "checkbox": { "type": "object" },
-    "radio": { "type": "object" },
-    "textarea": { "type": "object" },
-    "card": { "type": "object" },
-    "button": { "type": "object" },
-    "divider": { "type": "object" },
-    "cta": { "type": "object" },
-    "modal": { "type": "object" },
-    "overlay": { "type": "object" }
+    "input": {
+      "type": "object",
+      "properties": {
+        "border": {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "color": { "type": "string" },
+                    "width": { "type": "string" },
+                    "style": { "type": "string" }
+                  },
+                  "required": ["color"]
+                },
+                "type": { "type": "string", "enum": ["border"] }
+              },
+              "required": ["value", "type"]
+            }
+          }
+        }
+      }
+    },
+    "genui": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "type": "object",
+          "properties": {
+            "border": {
+              "type": "object",
+              "properties": {
+                "active": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "color": { "type": "string" },
+                        "width": { "type": "string" },
+                        "style": { "type": "string" }
+                      },
+                      "required": ["color"]
+                    },
+                    "type": { "type": "string", "enum": ["border"] }
+                  },
+                  "required": ["value", "type"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "additionalProperties": false
 }
