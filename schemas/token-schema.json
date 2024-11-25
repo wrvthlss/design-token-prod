@@ -9,10 +9,20 @@
         "^[a-zA-Z0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["fontSizes"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "fontSizes"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -22,10 +32,20 @@
         "^[a-zA-Z0-9_]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["shadow"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "shadow"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -35,10 +55,20 @@
         "^[a-zA-Z0-9-]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["fontFamilies"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "fontFamilies"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -51,10 +81,20 @@
             "^[0-9]+$": {
               "type": "object",
               "properties": {
-                "value": { "type": "string" },
-                "type": { "type": "string", "enum": ["fontWeights"] }
+                "value": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "fontWeights"
+                  ]
+                }
               },
-              "required": ["value", "type"]
+              "required": [
+                "value",
+                "type"
+              ]
             }
           },
           "additionalProperties": false
@@ -67,10 +107,20 @@
         "^[0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -80,10 +130,20 @@
         "^[0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["letterSpacing"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "letterSpacing"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -96,20 +156,42 @@
             "^[a-zA-Z0-9]+$": {
               "type": "object",
               "properties": {
-                "value": { "type": "string" },
-                "type": { "type": "string", "enum": ["color"] }
+                "value": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "color"
+                  ]
+                }
               },
               "anyOf": [
-                { "required": ["value", "type"] },
+                {
+                  "required": [
+                    "value",
+                    "type"
+                  ]
+                },
                 {
                   "patternProperties": {
                     "^(dark|light)$": {
                       "type": "object",
                       "properties": {
-                        "value": { "type": "string" },
-                        "type": { "type": "string", "enum": ["color"] }
+                        "value": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "color"
+                          ]
+                        }
                       },
-                      "required": ["value", "type"]
+                      "required": [
+                        "value",
+                        "type"
+                      ]
                     }
                   }
                 }
@@ -125,20 +207,40 @@
         "blur": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
     "buttonDisabled": {
       "type": "object",
       "properties": {
-        "value": { "type": "string" },
-        "type": { "type": "string", "enum": ["opacity"] }
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "opacity"
+          ]
+        }
       },
-      "required": ["value", "type"]
+      "required": [
+        "value",
+        "type"
+      ]
     },
     "size": {
       "type": "object",
@@ -146,10 +248,20 @@
         "^[0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -159,10 +271,20 @@
         "^[0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -172,20 +294,40 @@
         "^[a-zA-Z0-9-]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
     "borderWidth": {
       "type": "object",
       "properties": {
-        "value": { "type": "string" },
-        "type": { "type": "string", "enum": ["dimension"] }
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "dimension"
+          ]
+        }
       },
-      "required": ["value", "type"]
+      "required": [
+        "value",
+        "type"
+      ]
     },
     "sizing": {
       "type": "object",
@@ -193,10 +335,20 @@
         "^[0-9]+$": {
           "type": "object",
           "properties": {
-            "value": { "type": "string" },
-            "type": { "type": "string", "enum": ["dimension"] }
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "dimension"
+              ]
+            }
           },
-          "required": ["value", "type"]
+          "required": [
+            "value",
+            "type"
+          ]
         }
       }
     },
@@ -210,17 +362,19 @@
               "type": "object",
               "properties": {
                 "value": {
-                  "type": "object",
-                  "properties": {
-                    "color": { "type": "string" },
-                    "width": { "type": "string" },
-                    "style": { "type": "string" }
-                  },
-                  "required": ["color"]
+                  "type": "string"
                 },
-                "type": { "type": "string", "enum": ["border"] }
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "border"
+                  ]
+                }
               },
-              "required": ["value", "type"]
+              "required": [
+                "value",
+                "type"
+              ]
             }
           }
         }
@@ -239,24 +393,63 @@
                   "type": "object",
                   "properties": {
                     "value": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "border"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "type"
+                  ]
+                },
+                "resting": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
                       "type": "object",
                       "properties": {
-                        "color": { "type": "string" },
-                        "width": { "type": "string" },
-                        "style": { "type": "string" }
+                        "color": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "string"
+                        },
+                        "style": {
+                          "type": "string"
+                        }
                       },
-                      "required": ["color"]
+                      "required": [
+                        "color",
+                        "width",
+                        "style"
+                      ]
                     },
-                    "type": { "type": "string", "enum": ["border"] }
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "border"
+                      ]
+                    }
                   },
-                  "required": ["value", "type"]
+                  "required": [
+                    "value",
+                    "type"
+                  ]
                 }
-              }
+              },
+              "required": [
+                "active",
+                "resting"
+              ]
             }
           }
         }
       }
-    }
-  },
-  "additionalProperties": false
-}
+    },
+    "additionalProperties": false
+  }}
