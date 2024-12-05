@@ -13,7 +13,7 @@
       "type": "fontSizes"
     },
     "md": {
-      "value": "16",
+      "value": "22",
       "type": "fontSizes"
     },
     "lg": {
@@ -43,7 +43,7 @@
       "type": "shadow"
     },
     "shadow_3": {
-      "value": "0px 5px 30px 0 rgba(9, 5, 31, 0.6)",
+      "value": "0px 5px 30px 0 rgba(9, 5, 31, 0.0)",
       "type": "shadow"
     },
     "shadow_4": {
@@ -133,7 +133,7 @@
       },
       "400": {
         "dark": {
-          "value": "#435a7f",
+          "value": "blue",
           "type": "color"
         }
       },
@@ -241,7 +241,7 @@
       },
       "300": {
         "dark": {
-          "value": "#c78fff",
+          "value": "red",
           "type": "color"
         },
         "light": {
@@ -387,7 +387,7 @@
       "type": "dimension"
     },
     "rounded-3xl": {
-      "value": "22px",
+      "value": "0px",
       "type": "dimension"
     },
     "rounded-4xl": {
@@ -429,7 +429,7 @@
       "type": "dimension"
     },
     "6": {
-      "value": "24px",
+      "value": "42px",
       "type": "dimension"
     },
     "7": {
