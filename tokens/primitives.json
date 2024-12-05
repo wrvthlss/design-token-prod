@@ -304,8 +304,16 @@
     }
   },
   "size": {
+    "12" : {
+      "value" : "12px",
+      "type": "dimension"
+    },
     "14": {
       "value": "14px",
+      "type": "dimension"
+    },
+    "24": {
+      "value": "24px",
       "type": "dimension"
     },
     "30": {
@@ -338,6 +346,10 @@
     },
     "295": {
       "value": "295px",
+      "type": "dimension"
+    },
+    "331": {
+      "value": "331px",
       "type": "dimension"
     },
     "335": {
@@ -508,6 +520,10 @@
       "value": "320px",
       "type": "dimension"
     },
+    "88": {
+      "value": "335px",
+      "type": "dimension"
+    },
     "96": {
       "value": "384px",
       "type": "dimension"
@@ -531,18 +547,22 @@
     "025": {
       "value": "1px",
       "type": "dimension"
+    },
+    "020": {
+      "value": "-2px",
+      "type": "dimension"
+    },
+    "030": {
+      "value": "331px",
+      "type": "dimension"
     }
   },
   "input": {
     "border": {
       "color": {
-        "value": {
-          "color": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)",
-          "width": "1",
-          "style": "solid"
-        },
+        "value": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)",
         "type": "border"
-      }
+        }
     }
   },
   "sizing": {
