@@ -562,7 +562,7 @@
       "color": {
         "value": "linear-gradient(180deg, #c78fff 0%, #38d7ff 100%)",
         "type": "border"
-        }
+      }
     }
   },
   "sizing": {
